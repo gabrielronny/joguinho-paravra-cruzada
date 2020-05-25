@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Palavra Cruzada - Gabriel Ronny</title>
+
+
+	
+	<!--CSS-->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<!--JS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+	<div class="d-flex justify-content-center">
+		<div class="spinner-border" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+	</div>
+	<div class="start-game">
+		<button class="btn-start" onclick="start()">Iniciar</button>
+	</div>
+	<div class="container-game">
+		<div class="content-game">
+			<table>
+				<tbody>
+					<tr>
+						<td></td>
+						<td>2</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td>1 - </td>
+						<!-- <span class="title-word word1">1</span> -->
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-1 letter-2" >
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-1">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-1"> 
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<!-- <span class="title-word word1">2</span> -->
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-2">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-2">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td>14 - </td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-14 letter-2">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-14">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-2">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>15</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-2">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-15">
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td>3 - </td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-2 letter-3">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-3">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-3">
+						</td>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-15">
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-2">
+						</td>			
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>10</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-15">
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td>4 -</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-2 letter-4">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-4">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-4">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-10">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-15">
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-2">
+						</td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-6">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>13 - </td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-13">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-13">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-10 letter-13">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-13">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" value="-">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-13" >
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-13" >
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-13 letter-15">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-13">
+						</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-2">
+						</td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-6">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-10">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>16 -</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-15 letter-16" >
+						</td>
+						
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-16">
+						</td>
+					</tr>
+
+					<tr>
+						<td>5 -</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-2 letter-5">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-5">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-5">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-5 letter-6">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-5">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-10">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-15">
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-2">
+						</td>
+						<td></td>
+						<td>8 -</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-6 letter-8" >
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-8">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" value="-">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" value="-">
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" value="-">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-10">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-15">
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td></td>
+						<td>7 -</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-7">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-6 letter-7">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-7">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-7">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-7">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>12</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-10">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-15">
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>9 -</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-6 letter-9">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-9">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-9">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-9">
+						</td>
+						
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-9">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-9">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" value="-">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-9">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-9 letter-12" >
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-9 letter-10">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" value="-">
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>11 - </td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-11">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-11">
+						</td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-6 letter-11">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-12">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-15">
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-6">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-12">
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-15">
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>6</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-15">
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-15">
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="letter">
+							<input type="text" maxlength="1" class="letter-15">
+						</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="questions" data-aos="fade-right">
+			<div class="content">
+				<!-- <span>Seus Pontos</span> -->
+				<h5 class="points">SEUS PONTOS: <b id="b_points">0</b></h5><br>
+				<!--QUESTION 1-->
+				<span class="sp_question1">
+					1) É um componente essencial para o computador, quando desligada se perde tudo.
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question1">
+				</div>
+
+				<!--QUESTION 2-->
+				<span  class="sp_question2">
+					2) É utilizado na execução de programas no computador e fica na CPU.
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question2">
+				</div>
+
+				<!--QUESTION 3-->
+				<span  class="sp_question3">
+					3) É uma memória que permite somente a leitura.
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question3">
+				</div>
+
+				<!--QUESTION 4-->
+				<span  class="sp_question4">
+					4) Permite que os periféricos acessem a memória ram, sem ocupar o processador.
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question4">
+				</div>
+
+				<!--QUESTION 5-->
+				<span class="sp_question5">
+					5) É usado em dispositivos eletrônicos e serve para armazenar 
+					pequenas quantidades de dados que precisam ser salvos na falta de energia.
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question5">
+				</div>
+
+				<!--QUESTION 6-->
+				<span  class="sp_question6">
+					6) É um processador que tem dois núcleos e é fabricado pela intel.
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question6">
+				</div>
+
+				<!--QUESTION 7-->
+				<span class="sp_question7">
+					7) Permite que diversos endereços sejam apagados ou escritos numa só operação.
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question7">
+				</div>
+
+				<!--QUESTION 8-->
+				<span class="sp_question8">
+					8) É o nome de uma linha de controle para selecionar um conjunto de circuitos integrados.
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question8">
+				</div>
+
+				<!--QUESTION 9-->
+				<span class="sp_question9">
+					9) É um barramento do computador usado para transferir 
+					dados entre dispositivos pelo endereço de hardware da memória física.
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question9">
+				</div>
+
+				<!--QUESTION 10-->
+				<span class="sp_question10">
+					10) É um barramento de dados, serve para o transporte de dados.
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question10">
+				</div>
+
+				<!--QUESTION 11-->
+				<span class="sp_question11">
+					11) É o cérebro do computador e realiza instruções de um software.
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question11">
+				</div>
+
+				<!--QUESTION 12-->
+				<span class="sp_question12">
+					12) Executa as principais operações lógicas e aritiméticas do computador.
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question12">
+				</div>
+
+				<!--QUESTION 13-->
+				<span class="sp_question13">
+					13) Representa 4 núcleos trabalhando em um único processador, por exemplo o processador: Intel I3-9100F.
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question13">
+				</div>
+
+				<!--QUESTION 14-->
+				<span class="sp_question14">
+					14) É tipo de processador fabricado pela intel. Dica: Tem no número sete!
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question14">
+				</div>
+
+				<!--QUESTION 15-->
+				<span class="sp_question15">
+					15) É conhecida como memória auxiliar, serve para armazenar grandes quantidades de informações.
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question15">
+				</div>
+
+				<!--QUESTION 16-->
+				<span class="sp_question16">
+					16) É tipo de processador fabricado pela intel. Dica: Tem no número cinco!
+				</span>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="question16">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalStart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Olá...</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Para jogar basta ler as perguntas e digitar a resposta 
+					na caixinha logo abaixo, a cada acerto você irá acumular pontos. Boa sorte! 
+
+					<br><br>
+					<b>Feito por: Gabriel Ronny - CCOA</b>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalPontos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Parabéns...</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Você acertou! Você ganhou: <span id="ponts-modal">1</span> ponto. <i class="far fa-laugh-wink"></i>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="wrongQuestionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Opps...</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Você errou! Tente novamente <i class="far fa-frown"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- <footer>
+		<a href=""><i class="fab fa-github"></i></a>
+	</footer> -->
+	<!--JS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+	<script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="js/app.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+/*
+* ==============================================================================
+*                      RESET STYLES OF TAGS
+* ==============================================================================
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  /* background: #E5E6F0; */
+}
+
+body, input, button {
+  font-family: 'Roboto', sans-serif;
+}
+li {
+  list-style: none !important;
+}
+a {
+	text-decoration: none !important;
+	color: #000;
+}
+
+
+.d-flex {
+  display: none;
+  position: relative;
+  top: 50%;
+  color: #ffa600;
+}
+
+.spinner-border { display: none; }
+
+.container-game {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container-game .content-game {
+  display: none;
+  width: 50%;
+  height: 100%;
+  /* background: red; */
+  padding: 20px;
+} 
+
+.container-game .questions {
+  display: none;
+  width: 50%;
+  height: 100%;
+
+  overflow-y: scroll;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-game .questions .content {
+  width: 80%;
+  height: 90%;
+  background: #FFF;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+  border-radius: 5px;
+  padding: 30px;
+  overflow-y: scroll;
+}
+
+.container-game .questions .content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container-game .questions .content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.container-game .questions .content::-webkit-scrollbar-thumb {
+  background: #ffa600;
+}
+.container-game .questions .content::-webkit-scrollbar-thumb:hover {
+  background: #ffbc3f;
+}
+
+.form-control:focus {
+  border-color: #ffa600;
+  box-shadow: 0 0 0 0.2rem rgba(223, 219, 8, 0.25);
+  text-transform: uppercase !important;
+}
+
+.start-game {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-game .btn-start {
+  width: 250px;
+  height: 50px;
+  border: none;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 2px;
+  background: #ff5500;
+  outline: none;
+  color: #FFF;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+}
+
+.container-game .content-game td {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  
+}
+
+.container-game .content-game .letter {
+  
+  border: 1px solid #ffa600;
+  /* background: red; */
+}
+
+.letter input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  font-size: 14px;
+}
+
+
+
+/* footer {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: red;
+  position: absolute;
+}
+
+footer i:hover {
+  color: #ffa600;
+  transition: .2s;
+} */
